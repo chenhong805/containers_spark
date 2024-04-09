@@ -15,15 +15,15 @@ services:
       - SPARK_SSL_ENABLED=no
       - SPARK_USER=spark
     ports:
-      - '8080:8080'
-      - '8580:8580'
-      - '8980:8980'
+      - '18080:8080'
+      - '18580:8580'
+      - '18980:8980'
   spark-worker:
     image: docker.io/bitnami/spark:3.5
     restart: always
     ports:
-      - '8581:8581'
-      - '8981:8981'
+      - '18581:8581'
+      - '18981:8981'
     environment:
       - SPARK_MODE=worker
       - SPARK_MASTER_URL=spark://spark:7077
